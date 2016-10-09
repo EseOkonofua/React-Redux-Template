@@ -10,7 +10,7 @@ class TaskList extends Component {
   render(){
     return(
       <div className = 'tasklist' >
-        <h2 className='tasklist-header'>Task List</h2>
+        <h2 className='tasklist-header'>-TASK LIST-</h2>
         <div>
           {
             this.props.tasks.map((task,index)=>{

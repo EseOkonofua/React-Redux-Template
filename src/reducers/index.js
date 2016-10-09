@@ -16,11 +16,15 @@ var initialTasks = [
   {
     task: "Clean your room",
     completed: true
-  }
+    },
+    {
+        task: "Play some damn Path of Exile",
+        completed: true
+    }
+
 ];
 
 const allReducers = combineReducers({
-    headerTitle:()=>"Ese's React-Redux Beginner Starter Kit!",
     tasks :(state=initialTasks, action) =>{
       switch(action.type){
         case "TOGGLE_COMPLETE":

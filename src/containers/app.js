@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {Link,IndexLink} from 'react-router'
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux'
 
 import Header from '../components/header.component'
 import Footer from '../components/footer.component'
@@ -27,12 +25,6 @@ class App extends Component{
   }
 }
 
-function mapStateToProps(state){
-  return {
-    message:state.headerTitle,
-    saySomething:state.saySomething
-  }
-}
 
 
-export default connect(mapStateToProps)(App)
+export default App

@@ -1,16 +1,17 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 
 var extractCSS = new ExtractTextPlugin('styles.css',{
   allChunks:true
 });
 
 module.exports = {
-  entry: './src',
+  entry: ['./src','webpack-hot-middleware/client'],
 
   devtool: 'source-map',
   output: {
-    path:'public',
+    path:path.resolve('public'),
     filename: 'scripts/bundle.js',
     publicPath: '/'
   },
@@ -22,7 +23,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query:{
-          presets: ['es2015','react']
+          presets: ['react-hmre','es2015','react'],
         }
       },
       {
@@ -37,6 +38,8 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     extractCSS
   ] : [
-    extractCSS
+    extractCSS,
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 }
