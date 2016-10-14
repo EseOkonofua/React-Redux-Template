@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
 
 export default class Task extends Component {
+  constructor(){
+    super();
+    this.animationTimeout = null;
+  }
   handleToggle(){
     this.props.toggleComplete(this.props.index)
   }
 
   componentDidMount(){
-    window.setTimeout(()=>{
+    this.animationTimeout = setTimeout(()=>{
       this.refs.wrapper.className += ' animation-enter-active';
     },100+ (50*this.props.index))
   }
 
+  componentWillUnmount(){
+    clearTimeout(this.animationTimeout);
+  }
 
   render(){
     return(
