@@ -20,7 +20,25 @@ var initialTasks = [
     {
         task: "Play some damn Path of Exile",
         completed: true
+    },
+    {
+        task: "Learn react-redux",
+        completed: false
+    },
+    {
+        task: "Learn mongodb and other nosql databases",
+        completed: true
+    },
+    {
+        task: "Make a smash hit app",
+        completed:false
+    },
+    {
+        task: "Get $$$ rich and live happily ever after ",
+        completed: false
     }
+
+
 
 ];
 

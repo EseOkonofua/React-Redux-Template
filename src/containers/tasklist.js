@@ -8,16 +8,14 @@ import { toggleComplete } from '../actions'
 
 class TaskList extends Component {
   render(){
+    var taskList = this.props.tasks.map((task,index)=>{
+      return <Task key={index}  index={index} {...task} toggleComplete={this.props.toggleComplete}/>
+    });
+
     return(
       <div className = 'tasklist' >
         <h2 className='tasklist-header'>-TASK LIST-</h2>
-        <div>
-          {
-            this.props.tasks.map((task,index)=>{
-              return <Task key={index}  index={index} {...task} toggleComplete={this.props.toggleComplete}/>
-            })
-          }
-        </div>
+          {taskList}
       </div>
     )
   }
