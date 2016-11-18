@@ -7,7 +7,7 @@ var extractCSS = new ExtractTextPlugin('styles.css',{
 });
 
 module.exports = {
-  entry: ['./src','webpack-hot-middleware/client'],
+  entry: process.env.NODE_ENV === 'production' ? ['./src'] : ['./src','webpack-hot-middleware/client?reload=true'],
 
   devtool: 'source-map',
   output: {
@@ -23,7 +23,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query:{
-          presets: ['react-hmre','es2015','react'],
+          presets: process.env.NODE_ENV==='production'? ['es2015','react'] : ['react-hmre','es2015','react']
         }
       },
       {

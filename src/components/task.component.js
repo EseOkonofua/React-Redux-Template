@@ -5,6 +5,7 @@ export default class Task extends Component {
     super();
     this.animationTimeout = null;
   }
+  
   handleToggle(){
     this.props.toggleComplete(this.props.index)
   }
