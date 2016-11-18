@@ -37,9 +37,6 @@ var initialTasks = [
         task: "Get $$$ rich and live happily ever after ",
         completed: false
     }
-
-
-
 ];
 
 const allReducers = combineReducers({
