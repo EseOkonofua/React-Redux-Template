@@ -6,6 +6,14 @@ const toggleComplete = index =>{
   }
 }
 
+const removeTask = index=>{
+  return {
+    type:"REMOVE_TASK",
+    index
+  }
+}
+
 export {
-  toggleComplete
+  toggleComplete,
+  removeTask
 }

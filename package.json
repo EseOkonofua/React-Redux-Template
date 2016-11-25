@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-     "start:dev": "node ./server",
-     "start:prod": "webpack --display-error-details && node ./server"
+    "start:dev": "node ./server",
+    "start:prod": "webpack --display-error-details && node ./server"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-motion": "^0.4.5",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",
