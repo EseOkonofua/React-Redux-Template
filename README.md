@@ -6,6 +6,8 @@ The simplest of React-Redux template w/ React-router to help you get started wit
 
 This project features: 
 **Express**, **Webpack**, **React**, **React-Motion**, **Redux** and **React-Router**
+Styling:
+**SCSS**
 
 To get started:
 Download/Fork the respsitory
