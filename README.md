@@ -10,7 +10,7 @@ This project features:
 To get started:
 Download/Fork the respsitory
 In the command line run: 
-*npm start*
+**npm start**
 
 
 *Any suggestions would be greatly appreciated, but remember we are trying to keep it as simple as possible, so any newbie can get started*
