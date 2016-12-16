@@ -5,7 +5,7 @@ I find the templates for React & Redux are way too complicated, that's why I've 
 The simplest of React-Redux template w/ React-router to help you get started with your frontend!.
 
 This project features: 
-**Express**, **Webpack**, **React**, **Redux** and **React-Router**
+**Express**, **Webpack**, **React**, **React-Motion**, **Redux** and **React-Router**
 
 To get started:
 Download/Fork the respsitory
