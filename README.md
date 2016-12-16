@@ -7,5 +7,11 @@ The simplest of React-Redux template w/ React-router to help you get started wit
 This project features: 
 **Express**, **Webpack**, **React**, **Redux** and **React-Router**
 
+To get started:
+Download/Fork the respsitory
+In the command line run: 
+*npm start*
+
+
 *Any suggestions would be greatly appreciated, but remember we are trying to keep it as simple as possible, so any newbie can get started*
 
