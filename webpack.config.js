@@ -9,7 +9,7 @@ var extractCSS = new ExtractTextPlugin('styles.css',{
 module.exports = {
   entry: process.env.NODE_ENV === 'production' ? ['./src'] : ['./src','webpack-hot-middleware/client?reload=true'],
 
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'production' ? 'cheap-module-source-map' : 'source-map',
   output: {
     path:path.resolve('public'),
     filename: 'scripts/bundle.js',
@@ -33,6 +33,11 @@ module.exports = {
     ]
   },
   plugins: process.env.NODE_ENV === 'production' ? [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin(),
